@@ -12,7 +12,7 @@ export default function NavbarPage() {
     }
 
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 shadow-sm px-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -35,8 +35,9 @@ export default function NavbarPage() {
                     }
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Sign Up</a>
+            <div className="navbar-end gap-3">
+                <Link href={'/sign-in'} className='border-1 border-blue-500 px-3 py-2 rounded-xl'>Sign in</Link>
+                <Link href={'/sign-up'} className='border-1 border-blue-500 px-3 py-2 rounded-xl'>Sign Up</Link>
             </div>
         </div>
     )
