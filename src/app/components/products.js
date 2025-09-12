@@ -1,12 +1,17 @@
 
-import dbConnect, { collectionNameObj } from '@/lib/dbConnect'
+// import dbConnect, { collectionNameObj } from '@/lib/dbConnect'
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 
 export default async function ProductsPage() {
-  const dbCollection = dbConnect(collectionNameObj.productCollection);
-  const data = await dbCollection.find().toArray();
+  // const dbCollection = dbConnect(collectionNameObj.productCollection);
+  // const data = await dbCollection.find().toArray();
   // console.log(data);
+
+  const res = await fetch('http://localhost:3000/api/allProducts');
+  const data = await res.json();
+
   return (
     <div className='p-6 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6'>
       <h1 className='col-span-full text-2xl font-bold mb-4'>
@@ -30,7 +35,7 @@ export default async function ProductsPage() {
               <p>{singleData.description}</p>
               <p className="font-semibold">${singleData.price}</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
+                <Link href={`/product/${singleData._id}`}>View Details</Link>
               </div>
             </div>
           </div>
