@@ -6,7 +6,7 @@ import React from 'react'
 export default async function ProductsPage() {
   const dbCollection = dbConnect(collectionNameObj.productCollection);
   const data = await dbCollection.find().toArray();
-  console.log(data);
+  // console.log(data);
   return (
     <div className='p-6 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6'>
       <h1 className='col-span-full text-2xl font-bold mb-4'>

@@ -1,12 +1,38 @@
+"use client"
 import Link from 'next/link'
 import React from 'react'
+import { signIn } from "next-auth/react"
+// import { useRouter } from 'next/navigation'
 
 export default function SignInForm() {
+
+    // const router = useRouter();
+
+    const handleSignIn = async (e) => {
+        e.preventDefault;
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        // console.log({ email, password });
+        try {
+            await signIn("credentials", {
+                email,
+                password,
+                callbackUrl: "/",
+                redirect: false
+            })
+            // router.push('/')
+        } catch (error) {
+            console.log(error);
+            alert("Log In Failed")
+        }
+    }
+
     return (
         <div className="card-body">
             <h1 className='text-center font-bold text-2xl'>Login your account</h1>
 
-            <form className="fieldset">
+            <form onSubmit={handleSignIn} className="fieldset">
                 {/* Email */}
                 <label className="label">Email</label>
                 <input type="email" name='email' className="input" placeholder="Email" required />

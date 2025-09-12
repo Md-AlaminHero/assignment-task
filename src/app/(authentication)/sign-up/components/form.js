@@ -1,9 +1,12 @@
 "use client"
 import { registerUSer } from '@/app/actions/auth/registerUser';
 import Link from 'next/link'
+import { useRouter } from 'next/navigation';
 import React from 'react'
 
 export default function SignUpForm() {
+
+    const router = useRouter()
 
     const handleSignUp = async (e) => {
         e.preventDefault();
@@ -11,7 +14,9 @@ export default function SignUpForm() {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
+        console.log({ name, email, password });
         await registerUSer({ name, email, password });
+        router.push('/')
     }
     return (
         <div className="card-body">
