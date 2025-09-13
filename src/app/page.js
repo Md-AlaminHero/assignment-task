@@ -1,10 +1,12 @@
 import Image from "next/image";
-import ProductsPage from "./components/products";
+// import ProductsPage from "./components/products";
+import PaginationProducts from "./components/pagination";
 
 export default function Home() {
   return (
     <>
-      <ProductsPage></ProductsPage>
+      <PaginationProducts></PaginationProducts>
+      {/* <ProductsPage></ProductsPage> */}
     </>
   );
 }
