@@ -12,6 +12,25 @@ Users can **add, update, delete products** and manage their own product list.
 
 ---
 
+## ⚡ Setup Instructions
+
+Follow these steps to run the project locally:
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/Md-AlaminHero/assignment-task
+cd assignment-task
+
+npm install
+# or
+yarn install
+
+npm run dev
+# or
+yarn dev
+
+---
+
 ## 🚀 Features
 - 🔐 User Registration & Login (simple authentication)  
 - ➕ Add new products (with name, description, price, image)  

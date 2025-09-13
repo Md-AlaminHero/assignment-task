@@ -1,7 +1,9 @@
 "use client"
+import { signIn } from '@/auth';
+// import { signIn } from '@/app/api/auth/[...nextauth]/route';
 import Link from 'next/link'
 import React from 'react'
-import { signIn } from "next-auth/react"
+// import { signIn } from "next-auth/react"
 // import { useRouter } from 'next/navigation'
 
 export default function SignInForm() {
@@ -13,7 +15,7 @@ export default function SignInForm() {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        // console.log({ email, password });
+        console.log({ email, password });
         try {
             await signIn("credentials", {
                 email,

@@ -36,7 +36,7 @@ export default function NavbarPage() {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-                <Link href={'/sign-in'} className='border-1 border-blue-500 px-3 py-2 rounded-xl'>Sign in</Link>
+                {/* <Link href={'/sign-in'} className='border-1 border-blue-500 px-3 py-2 rounded-xl'>Sign in</Link> */}
                 <Link href={'/sign-up'} className='border-1 border-blue-500 px-3 py-2 rounded-xl'>Sign Up</Link>
             </div>
         </div>
