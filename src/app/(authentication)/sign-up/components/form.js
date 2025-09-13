@@ -35,7 +35,7 @@ export default function SignUpForm() {
                 <input type="password" name='password' className="input" placeholder="Password" required />
                 <button type='submit' className="btn btn-neutral mt-4">Register</button>
             </form>
-            <h1 className='text-center'>Already Have An Account ? <Link href={'/sign-in'} className='text-blue-600'>Sign In</Link></h1>
+            {/* <h1 className='text-center'>Already Have An Account ? <Link href={'/sign-in'} className='text-blue-600'>Sign In</Link></h1> */}
         </div>
     )
 }
