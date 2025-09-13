@@ -1,6 +1,7 @@
 "use client"
 import { useRouter } from 'next/navigation';
 import React from 'react'
+import Swal from 'sweetalert2';
 
 export default function DeleteButton({ id }) {
     const router = useRouter();
@@ -9,8 +10,16 @@ export default function DeleteButton({ id }) {
             method: "DELETE"
         });
         const data = await res.json();
-        router.refresh()
+        // router.refresh()
         console.log(data);
+        if (data.deletedCount) {
+            Swal.fire({
+                title: "Successfully Deleted",
+                icon: "success",
+                draggable: true
+            });
+            router.refresh()
+        }
     }
 
     return (
