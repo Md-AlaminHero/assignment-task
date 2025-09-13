@@ -1,9 +1,11 @@
 "use client"
 
+import { useRouter } from 'next/navigation';
 import React from 'react'
 import Swal from 'sweetalert2';
 
 export default function AddProductPage() {
+    const router = useRouter();
 
     const handleAddProduct = async (e) => {
         e.preventDefault();
@@ -31,6 +33,7 @@ export default function AddProductPage() {
                 icon: "success",
                 draggable: true
             });
+            router.push('/my-products')
         }
     }
 

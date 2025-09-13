@@ -1,8 +1,12 @@
 import React from 'react'
+import DeleteButton from './components/deleteButton';
+import { headers } from 'next/headers';
 
 export default async function MyProductsPage() {
 
-    const res = await fetch('http://localhost:3000/api/myAddProducts');
+    const res = await fetch('http://localhost:3000/api/myAddProducts', {
+        headers: await headers()
+    });
     const data = await res.json()
     console.log(data);
 
@@ -43,7 +47,7 @@ export default async function MyProductsPage() {
                                         <button className="btn btn-ghost btn-xs">Update</button>
                                     </th>
                                     <th>
-                                        <button className="btn btn-ghost btn-xs">Delete</button>
+                                        <DeleteButton id={singleData._id}></DeleteButton>
                                     </th>
                                 </tr>
                             )
