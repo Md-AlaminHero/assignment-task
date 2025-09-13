@@ -12,25 +12,6 @@ Users can **add, update, delete products** and manage their own product list.
 
 ---
 
-## ⚡ Setup Instructions
-
-Follow these steps to run the project locally:
-
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/Md-AlaminHero/assignment-task.git
-cd assignment-task
-
-npm install
-# or
-yarn install
-
-npm run dev
-# or
-yarn dev
-
----
-
 ## 🚀 Features
 - 🔐 User Registration & Login (simple authentication)  
 - ➕ Add new products (with name, description, price, image)  
@@ -50,3 +31,22 @@ yarn dev
 - [NextAuth.js](https://next-auth.js.org/)  
 
 ---
+
+## ⚡ Setup Instructions
+
+Follow these steps to run the project locally:
+
+### 1️⃣ Clone the Repository & Run Locally
+```bash
+git clone https://github.com/Md-AlaminHero/assignment-task.git
+cd assignment-task
+
+# Install dependencies
+npm install
+# or
+yarn install
+
+# Start development server
+npm run dev
+# or
+yarn dev
