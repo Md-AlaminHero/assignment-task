@@ -8,7 +8,8 @@ import { MongoClient, ServerApiVersion } from "mongodb";
 
 export const collectionNameObj = {
   productCollection: "test-data",
-  userCollection: "test-user"
+  userCollection: "test-user",
+  addProductsCollection: "add-products"
 }
 
 const uri = "mongodb+srv://test_data:7SryQIujMEgLrecE@cluster0.nrp7gyz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";

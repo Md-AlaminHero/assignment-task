@@ -5,8 +5,8 @@ export default function NavbarPage() {
 
     const navList = () => {
         return <>
-            <li><a>Packages</a></li>
-            <li><a>Services</a> </li>
+            <li><Link href={'/addProduct'}>Add Product</Link></li>
+            <li><Link href={'/my-products'}>My Products</Link></li>
             <li><a>About Us</a></li>
         </>
     }

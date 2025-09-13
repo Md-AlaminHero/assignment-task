@@ -6,3 +6,4 @@ export const GET = async (req) => {
     const data = await productsCollection.find().toArray();
     return NextResponse.json(data);
 }
+
