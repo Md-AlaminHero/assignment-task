@@ -1,6 +1,7 @@
 import React from 'react'
 import DeleteButton from './components/deleteButton';
 import { headers } from 'next/headers';
+import Link from 'next/link';
 
 export default async function MyProductsPage() {
 
@@ -44,7 +45,7 @@ export default async function MyProductsPage() {
                                     </td>
                                     <td>{singleData.price}</td>
                                     <th>
-                                        <button className="btn btn-ghost btn-xs">Update</button>
+                                        <Link href={`/my-products/${singleData._id}`} className="btn btn-ghost btn-xs">Update</Link>
                                     </th>
                                     <th>
                                         <DeleteButton id={singleData._id}></DeleteButton>

@@ -5,7 +5,7 @@ export default async function ProductPage({ params }) {
     const p = await params.id;
     const res = await fetch(`http://localhost:3000/api/product/${p}`);
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
     const { description, image, name, price } = data;
     return (
         <div className="hero bg-base-200 min-h-screen">
