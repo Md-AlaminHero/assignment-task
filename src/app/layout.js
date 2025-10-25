@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavbarPage from "./components/navbar";
+import FetchMeals from "./components/fetchMeals";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       >
         <NavbarPage></NavbarPage>
         {children}
+        <FetchMeals></FetchMeals>
       </body>
     </html>
   );
