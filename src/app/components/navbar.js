@@ -8,6 +8,7 @@ export default function NavbarPage() {
             <li><Link href={'/addProduct'}>Add Product</Link></li>
             <li><Link href={'/my-products'}>My Products</Link></li>
             <li><a>About Us</a></li>
+            <li><a>Contact Us</a></li>
         </>
     }
 
